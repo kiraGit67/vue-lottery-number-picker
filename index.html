@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata - Lottery Number Picker with Vue.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="app">
+        <div class="controls">
+            <h1>{{headlineText}}</h1>
+            <div class="buttons">
+                <button id="random-button" @click="addNumber" :disabled="allowAddNumber">{{randomButtonText}}</button>
+                <button id="reset-button" @click="reset" :disabled="allowReset">{{resetButtonText}}</button>
+            </div>
+        </div>
+        <div class="numbers">
+            <div class="number" v-for="number in numbers">{{number}}</div>
+        </div>
+    </main>
+    <script src="vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
